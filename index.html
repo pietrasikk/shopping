@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista zakupów</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>🛒 Lista zakupów</h1>
+
+  <form id="productForm">
+    <input type="text" id="name" placeholder="Nazwa produktu" required>
+    <input type="number" id="price" placeholder="Cena za sztukę" step="0.01" required>
+    <input type="number" id="quantity" placeholder="Ilość" min="1" value="1" required>
+    <button type="submit">Dodaj</button>
+  </form>
+
+  <div class="list-container">
+    <ul id="productList"></ul>
+
+    <div class="summary">
+      <strong>Suma:</strong> <span id="total">0.00</span> zł
+    </div>
+  </div>
+
+  <button id="resetBtn" class="reset">Reset listy</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
